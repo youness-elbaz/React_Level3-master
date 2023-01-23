@@ -1,0 +1,108 @@
+/*================================================
+00-Global
+================================================*/
+.Edit-Task {
+  min-height: calc(100vh - 133px);
+}
+/*================================================
+01-section Titel
+================================================*/
+.Edit-Task .titel-input {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 11px;
+}
+.Edit-Task .fa-pen-to-square {
+  font-size: 24px;
+  transition: 0.3s;
+}
+.Edit-Task .fa-pen-to-square:hover {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/*================================================
+02-section  sub tasks
+================================================*/
+
+.Edit-Task section.sub-Task {
+  border: 2px solid whitesmoke;
+  max-width: 650px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Edit-Task .parent-Time {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.Edit-Task .time {
+  font-size: 14px;
+}
+.Edit-Task #TaskCheked {
+  width: 18px;
+  height: 18px;
+  accent-color: teal;
+}
+.Edit-Task label {
+  font-size: 18px;
+  position: relative;
+  margin-left: 11px;
+  bottom: 3px;
+}
+.Edit-Task .CardTask {
+  background-color: rgb(65, 71, 84);
+  border-radius: 5px;
+  padding: 16px;
+  font-size: 18px;
+  box-shadow: 0 5px 30px 0 rgb(0 0 0 / 25%);
+  transition: 0.2s;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 11px;
+}
+.Edit-Task .CardTask:hover {
+  border-left: 8px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+.Edit-Task .fa-trash-can {
+  padding-right: 19px;
+  color: rgb(237, 171, 171);
+  transition: 0.2s;
+}
+.Edit-Task .fa-trash-can:hover {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/*================================================
+03-Btn edit && Btn delet
+================================================*/
+.Edit-Task .add-more-btn {
+  background-color: teal;
+  font-size: 16px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+}
+.Edit-Task .add-more-btn .fa-plus {
+  font-size: 14px;
+}
+.Edit-Task .parentBtn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.Edit-Task .delete {
+  font-size: 16px;
+  
+  border: none;
+  border-radius: 5px;
+}
