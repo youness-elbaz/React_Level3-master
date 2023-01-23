@@ -9,7 +9,7 @@ import Profile from "./pages/Profile";
 // LEVEL2
 import { useContext } from "react";
 import ThemeContext from "./context/ThemeContext";
-import Signin from './pages/Singin';
+import Signin from './pages/Signin/Singin';
 import Signup from './pages/Signup';
 
 const router = createBrowserRouter([

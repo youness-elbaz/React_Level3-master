@@ -29,7 +29,6 @@
 ================================================*/
 
 .Edit-Task section.sub-Task {
-  border: 2px solid whitesmoke;
   max-width: 650px;
 
   margin-left: auto;
@@ -102,7 +101,24 @@
 }
 .Edit-Task .delete {
   font-size: 16px;
-  
+
   border: none;
   border-radius: 5px;
 }
+/*================================================
+02-Light Mode
+================================================*/
+.Light .Edit-Task .titel-input ,
+.Light .Edit-Task .fa-pen-to-square,
+.Light .Edit-Task label,
+.Light .Edit-Task .time
+{
+  color: rgb(65, 71, 84);
+}
+
+.Light .Edit-Task .fa-pen-to-square:hover {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+

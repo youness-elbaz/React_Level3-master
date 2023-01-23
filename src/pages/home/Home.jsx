@@ -7,12 +7,19 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase/config";
 import { Link } from "react-router-dom";
 import { sendEmailVerification } from "firebase/auth";
+
 // Level 3
 import "./Home.css";
+import Model from "Shared/model/Model";
+import { useState } from "react";
 
 const Home = () => {
   const [user, loading, error] = useAuthState(auth);
   console.log(user);
+  const [showmodal, setshowmodal] = useState(false);
+  const closeModel = () => {
+    setshowmodal(false);
+  };
 
   const sendAgain = () => {
     sendEmailVerification(auth.currentUser).then(() => {
@@ -42,7 +49,9 @@ const Home = () => {
         <main>
           <h1 style={{ fontSize: "28px" }}>
             {" "}
-            <span>Welcome to our application🔥🔥🔥</span>{" "}
+            <span>
+              Welcome to our application <i className="fa-solid fa-cow"></i>
+            </span>{" "}
           </h1>
           <p className="pls">
             Please{" "}
@@ -122,23 +131,57 @@ const Home = () => {
             <section className="flex all-tasks mt">
               <article dir="auto" className="one-task">
                 <Link to={"/EditTask"}>
-                <h2>New Task</h2>
-                <ul>
-                  <li>sub task 1</li>
-                  <li>sub task 2</li>
-                </ul>
-                <p className="time">a day ago</p>
-                
+                  <h2>New Task</h2>
+                  <ul>
+                    <li>sub task 1</li>
+                    <li>sub task 2</li>
+                  </ul>
+                  <p className="time">a day ago</p>
                 </Link>
               </article>
-              
-              
             </section>
 
             {/* button add new task */}
 
             <section className="mt">
-              <button className="add-task-btn">Add New Task <i className="fa-solid fa-plus"></i> </button>
+              <button
+                onClick={() => {
+                  setshowmodal(true);
+                }}
+                className="add-task-btn"
+              >
+                Add New Task <i className="fa-solid fa-plus"></i>
+              </button>
+
+              {showmodal && (
+                <Model closeModel={closeModel}>
+              
+                <div style={{textAlign:"left"}}>
+                      <input
+                        onChange={(eo) => {}}
+                        required
+                        placeholder=" Add title : "
+                        type="text"
+                      />
+                      
+                  
+                  <div>
+                      <input
+                        onChange={(eo) => {}}
+                    
+                        placeholder=" Detail : "
+                        type="text"
+                      />
+                        <button onClick={(eo) => {
+                        eo.preventDefault();
+                      }}>Add</button>
+                  </div>
+                      <button onClick={(eo) => {
+                        eo.preventDefault();
+                      }}>Submit</button>
+                </div>
+                </Model>
+              )}
             </section>
           </main>
 

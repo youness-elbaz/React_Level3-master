@@ -195,3 +195,12 @@ span {
     opacity: 1;
   }
 }
+
+.Dark .fa-cow{
+  color: #dc3545;
+  font-size: 28px;
+}
+.Light .fa-cow{
+  color: #0c0c0c;
+  font-size: 28px;
+}
